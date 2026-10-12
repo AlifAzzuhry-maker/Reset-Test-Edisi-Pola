@@ -73,7 +73,7 @@ const CFG={
  WA_ENTRY:"entry.804756724"    // contoh: entry.987654321
 };
 const MAIN="https://alifazzuhry-maker.github.io/Suara-Kesadaran-Indonesia/";
-const LINK={RESET:"https://alifazzuhry-maker.github.io/Reset-Pola-7-Hari/"};
+const LINK={RESET:"https://alifazzuhry-maker.github.io/Reset-Pola-7-Hari/",SHIFT:"https://alifazzuhry-maker.github.io/Identity-Shift-21-Hari/",INNER:"https://alifazzuhry-maker.github.io/The-Inner-Reset-30-Hari/"};
 /* ========================== */
 let SC=null,NAMA="";
 const esc=t=>t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -134,7 +134,7 @@ T("Catatan: tes ini reflektif dan edukatif, bukan diagnosis atau pengganti bantu
 T("“Jangan percaya aku. Amati dirimu sendiri.” — Alif Azzuhry · Praktisi Kesadaran",10,0,0);
 d.save("Hasil-Reset-Test.pdf")}
 function cta(k,main){const t=encodeURIComponent(LINK[k]?"Halo Admin, aku ingin tanya tentang "+PR[k][0]+". Kata kunci: "+k:"Halo Admin, aku tertarik dengan "+PR[k][0]+" (coming soon). Kabari aku ya kalau sudah dibuka. Kata kunci: "+k);
-return `<div class="card"><span class="tag">${main?"Paling cocok untukmu":k=="PRIVAT"?"Ingin dipandu personal":"Alternatif"}</span>${LINK[k]?"":` <span class="tag" style="background:var(--bd);color:var(--tx)">Coming soon</span>`}<h3>${PR[k][0]}</h3><p class="small">${PR[k][1]}</p>${LINK[k]?"":`<p class="small mu">Program ini sedang disiapkan. Untuk saat ini, kabari Admin dan kamu akan diinfokan begitu dibuka.</p>`}<a class="btn ${main?'wa':'alt'}" href="${LINK[k]||`https://wa.me/${WA}?text=${t}`}" target="_blank" rel="noopener">${LINK[k]?"Lihat Reset Pola 7 Hari":"Kabari aku via WhatsApp"}</a>${LINK[k]?`<p class="small mu" style="margin:4px 0 0">Ingin tanya dulu? <a href="https://wa.me/${WA}?text=${t}" target="_blank" rel="noopener" style="color:var(--ac)">Chat Admin via WhatsApp</a></p>`:""}</div>`}
+return `<div class="card"><span class="tag">${main?"Paling cocok untukmu":k=="PRIVAT"?"Ingin dipandu personal":"Alternatif"}</span>${LINK[k]?"":` <span class="tag" style="background:var(--bd);color:var(--tx)">Coming soon</span>`}<h3>${PR[k][0]}</h3><p class="small">${PR[k][1]}</p>${LINK[k]?"":`<p class="small mu">Program ini sedang disiapkan. Untuk saat ini, kabari Admin dan kamu akan diinfokan begitu dibuka.</p>`}<a class="btn ${main?'wa':'alt'}" href="${LINK[k]||`https://wa.me/${WA}?text=${t}`}" target="_blank" rel="noopener">${LINK[k]?"Lihat "+PR[k][0]:"Kabari aku via WhatsApp"}</a>${LINK[k]?`<p class="small mu" style="margin:4px 0 0">Ingin tanya dulu? <a href="https://wa.me/${WA}?text=${t}" target="_blank" rel="noopener" style="color:var(--ac)">Chat Admin via WhatsApp</a></p>`:""}</div>`}
 function show(k){const p=P[k];document.getElementById("one").innerHTML=`<h3 style="margin-top:16px">${p.n}</h3><p class="quote">“${p.q}”</p><p><b>Pemicu:</b> ${p.p}</p><p><b>Respons otomatis:</b> ${p.r}</p><div class="exp"><b class="sans">Eksperimen 30 detik</b><br>${p.e}</div><p><b>Untuk direnungkan:</b> ${p.d}</p>`}
 start();
 </script>
