@@ -73,6 +73,7 @@ const CFG={
  WA_ENTRY:"entry.804756724"    // contoh: entry.987654321
 };
 const MAIN="https://alifazzuhry-maker.github.io/Suara-Kesadaran-Indonesia/";
+const KOPI="https://lynk.id/suara.kesadaran/s/4z8o248j8o3n";
 const LINK={RESET:"https://alifazzuhry-maker.github.io/Reset-Pola-7-Hari/",SHIFT:"https://alifazzuhry-maker.github.io/Identity-Shift-21-Hari/",INNER:"https://alifazzuhry-maker.github.io/The-Inner-Reset-30-Hari/"};
 /* ========================== */
 let SC=null,NAMA="";
@@ -104,6 +105,7 @@ $.innerHTML=`<span class="tag">Hasilmu · ${esc(NAMA)}</span><h1>${flat?"Belum a
 ${flat?`<div class="card"><p>Semua barismu ≤ 9, artinya belum ada pola yang menonjol. Baca saja pola yang paling menarik perhatianmu:</p><div class="opts">${P.map((p,k)=>`<button class="opt" onclick="show(${k})">${p.n}</button>`).join("")}</div><div id="one"></div></div>`:detail(sorted[0],"Pola Utama")+detail(sorted[1],"Pola Pendamping")}
 <h2 style="margin-top:28px">Langkah berikutnya</h2><p class="mu small">Tidak ada jalur yang lebih benar. Ini hanya panduan berdasarkan Ruang Jeda-mu.</p>${rec.map((x,j)=>cta(x,j==0)).join("")}${cta("PRIVAT",false)}
 <div class="card"><p class="small">Masih ragu mulai dari mana? Kirim hasilmu ke Admin, dan Admin akan membantu menjelaskan langkah berikutnya.</p><a class="btn wa" href="https://wa.me/${WA}?text=${enc()}" target="_blank" rel="noopener">Kirim hasil via WhatsApp</a><p class="small mu" style="margin-bottom:0">Admin 1 · 0877-5811-9913 &nbsp;|&nbsp; Admin 2 · 0831-3471-5814</p></div>
+<div class="card" style="text-align:center"><span class="tag">Opsional</span><h3>Traktir kopi ☕</h3><p class="small">Tes ini dan seluruh hasilnya gratis untukmu, tanpa syarat apa pun. Kalau terasa bermanfaat dan kamu ingin berterima kasih, kamu dipersilakan mentraktir kami kopi. Kalau tidak, tidak apa-apa.</p><a class="btn alt" href="${KOPI}" target="_blank" rel="noopener">Traktir kopi</a></div>
 <p class="small mu">Catatan: tes ini bersifat reflektif dan edukatif, bukan diagnosis atau pengganti bantuan profesional. Jika refleksi tentang emosi atau pengalaman pribadi terasa sangat berat, pertimbangkan mencari bantuan dari tenaga profesional yang sesuai.</p>
 <p class="small" style="text-align:center"><a href="${MAIN}" target="_blank" rel="noopener" style="color:var(--ac)">Kunjungi Suara Kesadaran ID</a></p>
 <button class="btn alt" onclick="start()">Ulangi tes</button>
